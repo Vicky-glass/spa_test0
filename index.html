@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="style.css" type="text/css" media="screen"> 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+	
+
+<script>
+function show(shown, hidden) {
+  document.getElementById(shown).style.display='block';
+  document.getElementById(hidden).style.display='none';
+   return false;
+}
+</script>
+</head>
+<body >
+  <div class="nav-menu"> 
+  <div id="Page1" >
+  <!-- Content of page 1 -->
+    	
+			<div class="cont1">
+				<h2>Список Дел</h2>
+				<input id="myToDo"></input>
+			</div>
+	<!-- </nav> -->
+	<nav class="menu">
+		<ul>
+			 <li class="fas fa-indent"><a  href="#" style="white-space:nowrap;">Список дел </a></li>  <!--PAGE1 -->
+			<li class="fas fa-filter"><a href="#" onclick="return show('Page2','Page1');">Фильтрация</a></li>  <!--page 2 -->
+			<li class="far fa-id-card"><a href="#" onclick="return show('Page3','Page1');">О себе</a></li>  <!--page 3 -->
+		</ul>	
+	</nav>
+
+	<!-- <h3>Page1</h3> -->
+	
+  </div>
+
+  <div id="Page2" style="display:none" >
+    <!-- Content of page 2 -->
+	
+	<nav class="menu">	
+		<ul>
+			<li class="fas fa-indent"><a href="#" onclick="return show('Page1','Page2');" style="white-space:nowrap;">Список дел</a></li>  <!--  page 1 -->
+			<li class="fas fa-filter"><a href="#" >Фильтрация</a></li>  <!--  PAGE2  -->
+			<li class="far fa-id-card"><a href="#" onclick="return show('Page3','Page2');">О себе</a></li> <!--  page 3  -->
+		</ul>	
+	</nav>
+	
+	<h3>Page2</h3>
+	
+  </div>
+  
+ 
+  <div id="Page3" style="display:none">
+    <!-- Content of page 3 -->
+			
+		<nav class="menu">
+			<ul>
+				<li class="fas fa-indent"><a href="#" onclick="return show('Page1','Page3');" style="white-space:nowrap;">Список дел</a></li> <!--  page 1 -->
+				<li class="fas fa-filter"><a href="#" onclick="return show('Page2','Page3');">Фильтрация</a></li> <!--   page 2 -->
+				<li class="far fa-id-card"><a href="#" >О себе</a></li>  <!--    PAGE3 -->
+			</ul>	
+		</nav>
+		
+		<h3>Page3</h3>
+		
+  </div>
+ </div>
+ </body>
+</html>
